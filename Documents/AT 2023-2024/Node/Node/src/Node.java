@@ -10,16 +10,21 @@ public class Node<T> {
 
     // Default "Empty" Constructor
     public Node(){
+        parentNode = null;
+        childNode = null;
+        value = null;
     }
 
     // 1 Input Constructor
-    public Node(T value){
-        this.value = value;
+    public Node(T valueInput){
+        this.value = valueInput;
+        parentNode = null;
+        childNode = null;
     }
 
     // 3 Input Constructor
-    public Node(T value, Node parentNodeInput, Node childNodeInput){
-        this.value = value;
+    public Node(T valueInput, Node parentNodeInput, Node childNodeInput){
+        this.value = valueInput;
         this.parentNode = parentNodeInput;
         this.childNode = childNodeInput;
     }
@@ -52,5 +57,15 @@ public class Node<T> {
         value.equals(newValue);
     }
 
-    //
+    // Method Overrides
+
+    public String toString(){
+        return "Node: " + value;
+    }
+
+    public boolean equals(Node passingNode){
+        if (this.getValue() == passingNode.getValue()){
+            return true;
+        } return false;
+    }
 }
