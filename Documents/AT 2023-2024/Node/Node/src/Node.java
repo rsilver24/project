@@ -1,6 +1,8 @@
+// Roan Silver      Created: September 21st 2023        Last Edits: September 26th, 2023
+// Collaborators: Luke O'Drobinak & Ethan Ayers       Peer Comments: September 4th, 2023
 public class Node<T> {
 
-    // Instance Data
+    // Instance Data !!!
 
     private Node parentNode;
     private Node childNode;
@@ -46,18 +48,18 @@ public class Node<T> {
     // MUTATORS :/
 
     public void setParentNode(Node newParentNode){
-        parentNode.equals(newParentNode);
+        parentNode = newParentNode;
     }
 
     public void setChildNode(Node newChildNode){
-        childNode.equals(newChildNode);
+        childNode = newChildNode;
     }
 
     public void setValue(T newValue){
-        value.equals(newValue);
+        value = newValue;
     }
 
-    // Method Overrides
+    // Method Overrides >:(
 
     public String toString(){
         return "Node: " + value;
